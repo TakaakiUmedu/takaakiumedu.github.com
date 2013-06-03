@@ -85,6 +85,7 @@ function progress(){
 		break;
 	case 4:
 		move_polygon(MASK3, TMP2_X, TMP2_Y, CHIP_LEFT + CHIP_WIDTH * 2, CHIP_TOP - CHIP_HEIGHT + offset * (turn + 1));
+		step ++;
 		break;
 	case 5:
 		move_polygon(MASK4, TMP3_X, TMP3_Y, CHIP_LEFT - CHIP_WIDTH * 3, CHIP_TOP + CHIP_HEIGHT + offset * (turn + 1));
