@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Style-Type" content="text/css"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<title>How to use decoration.js / decoration.jsの使い方</title>
+<link rel="index" href="index.html"/>
+<link rel="stylesheet" href="layout-default2.css"/>
+<link rel="stylesheet" href="color-default2.css"/>
+<script type="text/javascript" src="decoration.js"></script>
+<script type="text/javascript">
+DECORATION.set_debug_mode(true);
+</script>
+</head>
+<body>
+
+<h1>How to use decoration.js / decoration.jsの使い方</h1>
+
+<h2>Summary / 概要</h2>
+
+<p>
+HTML内の、<code>img</code>要素に、一言書くだけで、デコレーションを追加できるJavascript。
+本プロジェクトのメインページは、GitHubの<a class="ref" href="https://github.com/TakaakiUmedu/decoration.js">https://github.com/TakaakiUmedu/decoration.js</a>。
+</p>
+<p>
+A javascript that decorates <code>img</code> elements on HTML by adding simple specifications.
+The project main page is <a class="ref" href="https://github.com/TakaakiUmedu/decoration.js">https://github.com/TakaakiUmedu/decoration.js</a> on GitHub.
+</p>
+
+
+<h3>使い方</h3>
+
+<p>
+<a class="ref" href="http://takaakiumedu.github.io/decoration/decoration.js">decoration.js</a>をダウンロードしてサイト内の適当な場所に置き、
+次のようにHTMLに記述して読み込んでおき、<code>img</code>の<code>class</code>に、使いたいデコレーションを書けば、ロード後にそれが反映される。
+</p>
+<blockquote>
+<p class="monospace">
+&lt;script type="text/javascript" src="decoration.js"&gt;&lt;/script&gt;
+</p>
+</blockquote>
+
+<blockquote>
+<p class="monospace">
+&lt;img class="DECORATION.デコレーション名(オプション)" src="hoge.jpg"/&gt;<br/>
+もしくは<br/>
+&lt;img class="DECORATION.デコレーション名" src="hoge.jpg"/&gt; &lt;!--オプションが不要な場合--&gt;
+</p>
+</blockquote>
+
+<p>
+指定可能なオプションはデコレーションごとに異なる。<code>オプション名:パラメータ</code>の組み合わせを<q>,</q>で区切って指定する。
+HTMLの<code>class</code>属性の仕様上、パラメータの途中に空白を含めることは出来ない。
+文字列のパラメータの場合は引用符などは付けずに直接指定する。
+</p>
+<p class="follow">
+例えば、<code>enforce</code>デコレーションを、<code>x</code>を<q>0.1</q>、<code>y</code>を<q>0.0</q>、<code>color</code>を<q>rgba(255,255,255,0.7)</q>で適用する場合は以下のようになる。
+</p>
+
+<blockquote>
+<p class="monospace">
+&lt;img class="DECORATION.enforce(x:0.1,y:0.0,color:rgba(255,255,255,0.7))" src="hoge.jpg"/&gt;<br/>
+</p>
+</blockquote>
+
+<p>
+なお、長さの指定は全て、対象となる画像の縦横のサイズに対する比率。<code>x</code>の場合は画像の幅に対する、<code>y</code>の場合は画像の高さに対する比率で指定する。
+</p>
+
+<h3>How to use</h3>
+
+<p>
+Download <a class="ref" href="http://takaakiumedu.github.io/decoration/decoration.js">decoration.js</a>, put it at any place in your cite and add script tag to load it as follows.
+Then, by specifying decoration in <code>class</code> attributes of <code>img</code> tags to be decorated, the images will be decorated as soon as loaded.
+</p>
+<blockquote>
+<p class="monospace">
+&lt;script type="text/javascript" src="decoration.js"&gt;&lt;/script&gt;
+</p>
+</blockquote>
+
+<blockquote>
+<p class="monospace">
+&lt;img class="DECORATION.decoration_name(options)" src="hoge.jpg"/&gt;<br/>
+or<br/>
+&lt;img class="DECORATION.decoration_name" src="hoge.jpg"/&gt; &lt;!--when no option needed--&gt;
+</p>
+</blockquote>
+
+<p>
+Avairable options are different for each decoration.
+Pairs of <code>option_name:parameter</code> separated by <q>,</q> can be specified.
+Due to the specification of HTML's <code>class</code> attribute, no space character can be included in the parameters.
+String parameters should be specified without any quotation marks.
+</p>
+<p class="follow">
+For example, to apply <code>enforce</code> decoration with <code>x</code> as <q>0.1</q>, <code>y</code> as <q>0.0</q> and <code>color</code> as <q>rgba(255,255,255,0.7)</q>,
+the specification can be written as follows.
+</p>
+
+<blockquote>
+<p class="monospace">
+&lt;img class="DECORATION.enforce(x:0.1,y:0.0,color:rgba(255,255,255,0.7))" src="hoge.jpg"/&gt;<br/>
+</p>
+</blockquote>
+
+<p>
+Here, the unit of lengths is ratio to the size of the target image.
+The lengths specified by <code>x</code> and <code>y</code> are considered as the ratio to the width and height of the image, respectively.
+</p>
+
+<h2>Avairable decorations and their options / デコレーションの種類とオプション</h2>
+
+<h3>enforce / 集中線</h3>
+<blockquote>
+<p class="monospace">
+&lt;img class="<span style="color:red;">DECORATION.enforce(y:-0.3)</span>" src="03.jpg" style="width:240px;height:auto;" alt="We are enforced! / 強いられているんだ"/&gt;
+</p>
+</blockquote>
+<p>
+<img class="DECORATION.enforce(y:-0.3)" src="03.jpg" style="width:240px;height:auto;" alt="We are enforced! / 強いられているんだ"/>
+</p>
+<pre class="follow">
+ x,    y  : 中心の位置。(x, y)=(0, 0)が中央、左上が(-0.5, -0.5)で、右下が(0.5, 0.5)。
+ min, max : とげの長さ。中心～角の長さを1として指定する。min～maxの間の一様ランダムなとげが描かれる。
+ width    : とげの太さ。角度を度単位で指定。0～width度の一様ランダムなとげが描かれる。
+ skip     : とげととげの間の隙間。角度を度単位で指定。<q>とげの中心</q>～<q>次のとげの中心</q>が0～skip度の一様ランダムな隙間が空く。
+ color    : とげの色。デフォルトは<q>rgba(255,255,255,0.7)</q>。
+</pre>
+
+<hr/>
+
+<pre class="follow">
+ x, y     : Position of the decoration's center. 
+            The center, top left and right bottom of the image are (x, y)=(0, 0), (-0.5, -0.5) and (0.5, 0.5) respectively.
+ min, max : Length of the needles. The distance from center to the corners is considered as 1. 
+            The lengths of the needles follow the uniform distribution between min to max.
+ width    : Thikness of the needles. Specify the angle widh degree.
+            The thikness of the needles follow the uniform distribution between 0 to width degree.
+ skip     : Skips of between needles. Specify the angle widh degree.
+            The skips between the center of a needle to that of the next follow the uniform distribution between 0 to skip degree.
+ color    : Color of the needles. The default is <q>rgba(255,255,255,0.7)</q>.
+</pre>
+
+<h3>snow / 雪</h3>
+<blockquote>
+<p class="monospace">
+&lt;img class="<span style="color:red">DECORATION.snow</span>" src="01.jpg" style="width:240px;height:auto;" alt="snow / 雪"/&gt;
+</p>
+</blockquote>
+<p>
+<img class="DECORATION.snow(color:rgba(255,255,255,1.0))" src="01.jpg" style="width:240px;height:auto;" alt="snow / 雪"/>
+</p>
+<pre class="follow">
+ min, max, k : 雪のサイズ。画面の縦の長さを1として、min～maxの間の一様分布に従うrに対して、r<sup>k</sup>なサイズの雪が降る。全ての動きはサイズに比例したスピードになる。
+ dx          : 雪が横方向に動くスピード。
+ time        : 最大サイズの雪の粒が上から下まで何秒かかるか。
+ count       : 雪の個数。
+ color       : 雪の色。
+</pre>
+
+<hr/>
+
+<pre class="follow">
+ min, max, k : Size of snow particles.
+               The size of each particle is decided by r<sup>k</sup>, where r follows the uniform distribution between min to max multiplyed by the height of the image.
+               The speed of a falling particle is in propotion to the size of it.
+ dx          : Horizontal speed of particles.
+ time        : The time how long a maximum particle takes to fall from the top to the bottom.
+ count       : The number of snow particles.
+ color       : Color of the snow.
+</pre>
+
+<h4>rain / 雨</h4>
+<blockquote>
+<p class="monospace">
+&lt;img class="<span style="color:red;">DECORATION.rain(angle:10)</span>" src="05.jpg" style="width:240px;height:auto;" alt="rain / 雨"/&gt;
+</p>
+</blockquote>
+<p>
+<img class="DECORATION.rain(angle:10)" src="05.jpg" style="width:240px;height:auto;" alt="rain / 雨"/>
+</p>
+
+<pre class="follow">
+ lineWidth : 線の太さ。画像の幅に対する倍率で指定。
+ min, max  : 線の長さ。画像の高さを1としたときに、min～maxの長さの一様ランダムな線が引かれる。
+ count     : 線の量。
+ color     : 線の色。
+ angle     : 雨の角度。
+</pre>
+
+<hr/>
+
+<pre class="follow">
+ lineWidth : Width of lines specified by the ratio to the width of the image.
+ min, max  : Lengths of lines specified by the ratio to the height of the image. 
+             The lengths follow the uniform distribution between min to max.
+ count     : The number of lines
+ color     : Color of rain
+ angle     : Angle of rain
+</pre>
+
+<h4>star / 星</h4>
+<blockquote>
+<p class="monospace">
+&lt;img class="<span style="color:red;">DECORATION.star</span>" src="04.jpg" style="width:240px;height:auto;" alt="star / 星"/&gt;
+</p>
+</blockquote>
+<p>
+<img class="DECORATION.star" src="04.jpg" style="width:240px;height:auto;" alt="雨"/>
+</p>
+
+<p class="follow">
+パラメータが多すぎるのでリストは略。
+</p>
+<hr/>
+<p class="follow">
+Parameter list omitted. Too many parameters.
+</p>
+
+<h4>ripple / 波紋</h4>
+<blockquote>
+<p class="monospace">
+&lt;img class="<span style="color:red;">DECORATION.ripple</span>" src="02.jpg" style="width:240px;height:auto;" alt="ripple / 波紋"/&gt;
+</p>
+</blockquote>
+<p>
+<img class="DECORATION.ripple" src="02.jpg" style="width:240px;height:auto;" alt="ripple / 波紋"/>
+</p>
+
+<p class="follow">
+パラメータリストは略。あと、動作が重すぎる。
+</p>
+<hr/>
+<p class="follow">
+Parameter list omitted. BTW, Too heavy.
+</p>
+
+
+
+<h2>Debug messages / デバッグメッセージ</h2>
+
+<p>読み込み後に以下のようなコードを実行することでデバッグモードをONにでき、その場合、デバッグメッセージがHTMLの末尾に追加される。</p>
+<p>After loading the script, debug mode can be turned on by the following code. When turned on, the debug message will be added to the bottom of the HTML.</p>
+
+<blockquote>
+<pre>
+DECORATION.set_debug_mode(true);
+</pre>
+</blockquote>
+
+<p>このページはデバッグモードをONにしているため、以下にデバッグメッセージが表示される。</p>
+<p>In this page, debug mode is turned on. So debug messages will be added on the bellow.</p>
+
+<hr/>
+
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+body {
+	background-color : #fff;
+	color : #000;
+}
+p,ul,ol,dl,table,blockquote {
+/*	color : white;*/
+/*	background-color : black;*/
+}
+h2, h3, h4{
+	color: #000;
+	background-color : #FFF0FF;
+	border-color : #A7738E;
+}
+h1{
+	color: #000;
+	border-color : #c0c0ff;
+	background-color : #e0e0ff;
+}
+
+caption {
+	border-color : #A7738E;
+}
+object{
+	border-color : #aaf;
+	background-color : white;
+}
+h2.highlighted {
+	background-color : #fee;
+	border-color : #f78;
+}
+p.links {
+	color : #000;
+	background-color : #FFEBFF;
+	border-color : #A7738E;
+}
+/*
+blockquote p, blockquote pre, blockquote ul, blockquote ol, blockquote dl{
+	color : white;
+	background-color : #222;
+	border-color : #aaa;
+}
+*/
+blockquote {
+	color : #fff;
+}
+a:link {
+	color : #080;
+}
+a:link img{
+	border-color : #080;
+}
+a:visited {
+	color : #048;
+}
+a:visited img {
+	border-color : #048;
+}
+a:active {
+	color : #000;
+}
+a:active img {
+	border-color : #000;
+}
+a:hover, .link_title:hover {
+	background-color : #A7738E;
+	color : #fff;
+}
+a:hover img {
+	border-color : #557;
+}
+em, em a:link {
+	color : #DF3C86;
+}
+cite,dt {
+	color : #55d;
+}
+
+q {
+	color : #55d;
+}
+q:before, q:after{
+	color: #000;
+}
+
+samp {
+	color : #aaf;
+}
+.link {
+	background-color : black;
+}
+table {
+	color : #aaa;
+	background-color : #A7738E;
+}
+table {
+	color : #fff;
+}
+tr,td,caption,blockquote{
+	color: #000;
+	background-color : #FFEBFF;
+	border-color : #E7A3AE;
+}
+th {
+	color : #FFF;
+	background-color : #E7A3AE;
+}
+hr {
+	background-color : #222;
+	border-color : #999;
+}
+samp {
+	font-size : 1em;
+}
+table.noframe,table.noframe tr,table.noframe tr td{
+	background-color : transparent;
+}
+.caution-panel {
+	background-color : transparent;
+}
+code {
+	color : #D35;
+}
+p.break{
+	text-indent : 10em;
+	clear : none;
+	margin : 0 0 -1.5em 0;
+	padding : 0;
+	border-width : 0;
+}
+table.calender, table.calender tr, table.calender tr td.void{
+	background-color: transparent;
+	border-width:0;
+}
+table.calender{
+	margin-top : 2px;
+}
+
+table.calender tr td{
+	border-color : #A7738E;
+}
+
+table.calender tr td.empty{
+	background-color : #fff;
+}
+
+div.information, p.index, div.information2{
+	border-color : #c0c0ff;
+	background-color : #e0e0ff;
+}
+a.self_link{
+	color : #38c;
+}
