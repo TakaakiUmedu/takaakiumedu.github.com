@@ -1,0 +1,494 @@
+body,p,h1,h2,h3,h4,h5,h6 {
+	white-space : normal;
+	font-style : medium;
+	font-weight : normal;
+	font-family : "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+html, head{
+	width : 100%;
+	margin : 0px;
+	padding : 0px;
+	border-width : 0px;
+}
+body{
+	width : 100%;
+	margin : 0px;
+	padding : 0px;
+	border-width : 0px;
+}
+ul.index li,
+ul.pre-index li,
+ul.links li,
+code,
+pre{
+	font-family : "ＭＳ ゴシック", "MS Gothic", monospace;
+}
+p.monospace{
+	font-family : "ＭＳ ゴシック", "MS Gothic", monospace;
+	text-indent : 0;
+}
+p,ins {
+	margin-top : 0.5em;
+	margin-bottom : 0.5em;
+	margin-left : 1em;
+	margin-right : 1em;
+	line-height : 1.3em;
+	text-indent : 1.5em;
+	clear : both;
+	text-align : justify;
+	text-justify : inter-ideograph;
+}
+p.continue {
+	text-indent : 0em;
+}
+blockquote {
+	clear: both;
+}
+h1,h2,h3,h4,h6 {
+	clear : both;
+}
+h1 {
+	border-width : 0px 2em 1px 2em;
+	font-size : larger;
+	text-align : center;
+	padding : 0.5em 1em 0.5em 1em;
+	border-style : solid;
+	margin : 0.5em;
+}
+h2, h3, h4{
+	font-size : larger;
+	border-width : 0px 2em 1px 2em;
+	border-style : solid;
+}
+h2{
+	padding : 0.4em 1em 0.4em 1em;
+	margin: 1em 1.5em 0px 1.5em;
+	font-weight: bolder;
+}
+h3{
+	padding : 0.3em 1em 0.3em 1em;
+	margin: 0px 2.5em 0px 2.5em;
+}
+h4{
+	padding : 0.2em 1em 0.2em 1em;
+	margin: 0px 3.5em 0px 3.5em;
+}
+h1, h2, h3, h4{
+/*	filter: shadow(color=black, direction=135, strength=10);*/
+}
+p, ul, ol, blockquote, table, caption,pre{
+	margin-left: 5em;
+	margin-right: 5em;
+}
+blockquote pre, blockquote p, blockquote ul, blockquote ol{
+	margin-left: 0em;
+	margin-right: 0em;
+}
+table{
+/*	margin-top : 1em;*/
+	margin-bottom : 1em;
+	border-style : none;
+}
+
+em {
+	font-style : normal;
+	font-weight : bolder;
+}
+q, q em {
+	font-style : normal;
+	font-weight : bolder;
+}
+q {
+	quotes: "“" "”" "「" "」" "『" "』";
+}
+q.j, q.j q {
+	quotes: "「" "」" "『" "』" "“" "”";
+}
+q:before {
+	content: open-quote;
+	font-weight: normal;
+}
+q:after {
+	content: close-quote;
+	font-weight: normal;
+}
+code,pre{
+	font-size : 90%;
+}
+
+
+td {
+	margin : 0;
+	padding : 5px;
+	border-width : 0;
+	border-style : solid;
+}
+th {
+	margin : 0;
+	padding : 5px;
+	font-weight : bold;
+}
+table.float {
+	clear : both;
+	float : left;
+	margin : 0.5em 0.5em 0.5em 5em;
+/*	margin : 0px;*/
+}
+
+p.links {
+	text-indent : -2em;
+	clear : both;
+	font-size : 80%;
+	margin : -1px 5em 0 5em;
+	border-left : 0.5em solid;
+	border-right : 0.5em solid;
+	border-bottom : 1px solid;
+	padding : 2px 2em 2px 4em;
+}
+
+blockquote.float{
+	margin : 1em 1em 1em 1em;
+	padding : 3px 3px 3px 3px;
+	float : left;
+}
+blockquote.follow{
+	clear : none;
+}
+ol.float {
+	clear : both;
+	float : left;
+	margin : 6px;
+	list-style-position : inside;
+}
+caption {
+	text-align : center;
+	border-width : 1px;
+	padding : 5px;
+	border-style : solid;
+}
+blockquote {
+	margin : 1em 5em 1em 5em;
+	border-width : 5px;
+	padding : 3px 2em 3px 2em;
+	border-style : solid;
+}
+blockquote.follow{
+	clear : none;
+}
+
+li,dt {
+	line-height : 1.1em;
+	margin-left : 1em;
+	margin-top : 0.3em;
+	margin-bottom : 0.3em;
+}
+
+dl {
+	margin : 0.2em 2em 0.5em 3em;
+}
+dt {
+	font-weight : bolder;
+}
+
+rt
+{
+	font-size : xx-small;
+}
+a ruby rt
+{
+	text-decoration : none;
+}
+
+hr{
+	margin : 0 5em;
+}
+
+/*
+ul,dl {
+	margin : 0.2em 0 0.2em 0;
+	list-style-type : disc;
+}
+ol {
+	margin : 0.2em 0 0.2em 0.5em;
+}
+table {
+	padding : 0;
+	border-width : 1px;
+	border-style : solid;
+	margin : 1em;
+}
+object{
+	border-style : solid;
+	border-width : 2px;
+}
+hr {
+	clear : both;
+	height : 6px;
+	border : 3px;
+	border-style : outset none outset none;
+}
+q {
+	font-style : italic;
+}
+samp {
+	font-size : 1em;
+	font-weight : bold;
+}
+rt
+{
+	font-size : xx-small;
+}
+a ruby rt
+{
+	text-decoration : none;
+}
+ul.index li{
+	font-size : small;
+}
+ul.pre-index li, ul.links li{
+	font-size : x-small;
+}
+code,pre{
+	font-size : 90%;
+}
+li,dt,dd {
+	clear : both;
+}
+ul {
+	margin-left : 1em;
+}
+li,dt {
+	line-height : 1.3em;
+	margin-left : 1em;
+	margin-top : 0;
+	margin-bottom : 0;
+}
+dt {
+	text-decoration : underline;
+	font-weight : bold;
+	margin : 0.2em 0 0 1em;
+}
+dd {
+	line-height : 1.3em;
+	margin : 0 0 0 1em;
+}
+table.header caption{
+	text-align : center;
+}
+
+div{
+	margin : 0px;
+	padding : 0px;
+	border-width : 0px;
+}
+
+*/
+table.noframe{
+	float : left;
+}
+table.noframe,table.noframe tr{
+	border : 0;
+	padding : 0;
+	margin : 0.5em 0.5em 0.5em 5em;
+/*	margin : 0;*/
+}
+table.noframe tr td{
+	margin : 0 0.25em 0 0.25em;
+	border-width : 0 0.25em 0 0.25em;
+	border-color : transparent;
+	padding : 0;
+}
+
+p.follow, p.continue{
+	clear : none;
+}
+ol.follow li{
+	list-style-position : outside;
+	clear : none;
+	text-indent : 2em;
+}
+ul.follow li{
+	list-style-position : inside;
+	clear : none;
+	text-indent : 0em;
+}
+dl.follow dt {
+	clear : none;
+	text-indent : 0em;
+}
+dl.follow dd {
+	clear : none;
+}
+p.float {
+	float : left;
+	text-indent : 0px;
+}
+p img,p img.left {
+	float : left;
+}
+p img.right {
+	float : right;
+}
+p img.here {
+	float : none;
+}
+img{
+	margin : 3px;
+	border-style : solid;
+	border-width : 2px;
+}
+
+/* for some functions*/
+#CAUTION_PANEL{
+	margin-left:20%;
+	margin-right:20%;
+}
+#CAUTION_PANEL_NOSMOKING{
+	float : left;
+	width : 30%;
+}
+#CAUTION_PANEL_CD{
+	float : right;
+	width : 40%;
+}
+.caution-panel {
+	font-size : smaller;
+}
+.caution-icon-left{
+	float : left;
+	border-width : 0px;
+}
+td.code{
+	text-align : right;
+	font-family : "ＭＳ ゴシック", "MS Gothic", monospace;
+}
+td.right{
+	text-align : right;
+}
+hr.footer {
+	padding : 0px;
+	margin : 0px 5em 0px 5em;
+	clear : both;
+	height : 0px;
+	border-width : 0px;
+	border-style : none;
+}
+
+div.information, div.information2{
+	position:absolute;
+	top:80px;
+	left:0px;
+	width:200px;
+	margin : 2px;
+	padding: 3px;
+	border-style: solid;
+	border-width: 2px;
+}
+div.information h2, div.information2 h2{
+	font-size :medium;
+	margin: 1em 0 0 0;
+	padding: 0.2em 0.1em 0.2em 0.1em;
+	border-width: 0 1em 0 1em;
+	text-align: center;
+}
+div.information h3, div.information h3{
+	font-size :smaller;
+	margin: 0;
+	border-width: 0 1em 0 1em;
+}
+div.information2{
+	width:500px;
+}
+
+ul.compact{
+	margin: 0 0.5em 0 0.5em;
+	padding: 0;
+}
+ul.compact li{
+	text-indent: -1em;
+	list-style-type: none;
+}
+ul.compact li a{
+	font-weight:bolder;
+}
+
+
+div.information p, div.information2 p{
+	text-indent : 0;
+	padding : 0 0 0 0.5em;
+	margin : 0;
+}
+
+div.twitter {
+	text-align : center;
+}
+div.twtr-hd a img{
+	float : left;
+}
+
+div.twtr-hd h3, div.twtr-hd h4{
+	clear :none;
+	margin: 0 0 0 0;
+	padding : 0 1em 0 1em;
+	border-width: 0 0 0 0;
+}
+
+table.calender{
+	margin : 0;
+	width:100%;
+	vertical-align:top;
+	border-collapse: collapse;
+	border-width:1px;
+	border-style : solid;
+	table-layout:fixed;
+}
+table.calender tr td{
+	border-width:1px;
+	border-style : solid;
+	padding : 2px;
+	vertical-align:top;
+	font-size:15px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+div.calender table.calender{
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.main{
+	margin-left: 200px;
+}
+div.index{
+	margin-left: 500px;
+}
+div.information p.caution, div.information2 p.caution{
+	font-size: smaller;
+	text-indent: 0px;
+	vertical-align: middle;
+}
+div.information p.caution img, div.information2 p.caution img{
+	vertical-align: middle;
+	border-width : 0px;
+	float: none;
+}
+
+p.index{
+	border-style: solid;
+	border-width: 1px 2em 0 2em;
+	padding: 0.5em;
+	text-align: center;
+}
+div.index ul{
+	margin : 0.5em 1em 0.5em 1em;
+}
+div.main>p:after{
+	content: "\A0";
+	margin: 0 0 -1.5em 0;
+	padding:0px;
+	border-width:0px;
+	text-indent:5em;
+	display:block;
+	visibility:hidden;
+}
