@@ -53,7 +53,7 @@ The program is published in <a class="ref" href="https://github.com/TakaakiUmedu
 
 <p>
 <a class="ref" href="http://takaakiumedu.github.io/decoration/decoration.js">decoration.js</a>をダウンロードしてサイト内の適当な場所に置き、
-次のようにHTMLに記述して読み込んでおき、<code>img</code>の<code>class</code>に、使いたいデコレーションを書けば、ロード後にそれが反映される。
+次のようにHTMLに記述して読み込んでおき、<code>img</code>の<code>class</code>に、使いたいデコレーションを書けば、ページのロード後にそれが反映される。
 </p>
 <blockquote>
 <p class="monospace">
@@ -92,7 +92,7 @@ HTMLの<code>class</code>属性の仕様上、パラメータの途中に空白�
 
 <p>
 Download <a class="ref" href="http://takaakiumedu.github.io/decoration/decoration.js">decoration.js</a>, put it at any place in your web site and add script tag to load it as follows.
-Add specification of decoration into <code>class</code> attributes of <code>img</code> tags, and the images will be decorated as soon as loaded.
+Add specification of decoration at <code>class</code> attributes of <code>img</code> tags, and the images will be decorated as soon as the page isloaded.
 
 </p>
 <blockquote>
@@ -113,7 +113,7 @@ or<br/>
 Available options are different for each decoration.
 Pairs of <code>option_name:parameter</code> separated by <q>,</q> can be specified.
 Due to the specification of HTML's <code>class</code> attribute, no space character can be included in the parameters.
-String parameters should be specified without any quotation marks.
+String parameters must be specified without any quotation marks.
 </p>
 <p class="follow">
 For example, to apply <code>enforce</code> decoration with <code>x</code> as <q>0.1</q>, <code>y</code> as <q>0.0</q> and <code>color</code> as <q>rgba(255,255,255,0.7)</q>,
@@ -137,12 +137,15 @@ The lengths specified by <code>x</code> and <code>y</code> are considered as the
 
 <pre>
 interval : 描画間隔、ミリセカンドで指定。デフォルトは100ms。
+color    : 描画色。Canvasで利用可能な方式で指定。<q>argb(赤,青,緑,透明度)</q> (赤、青、緑は0～255、透明度は0～1.0で指定)や、<q>blue</q>、<q>red</q>などの文字列など
 </pre>
 
 <hr/>
 
 <pre>
 interval : Interval of drawing by miliseconds. Defalut is 100ms.
+color    : Color of drawings. It should be specified in any way that can be used on Canvas. 
+           For example, <q>argb(RED,BLUE,GREEN,TRANSPARENCY)</q> (RED, BLUE and GREEN should be between 0 to 255 and TRANSPARENCY should be 0 to 1.0), <q>blue</q> or <q>red</q>.
 </pre>
 
 <h3>enforce / 集中線</h3>
@@ -169,7 +172,7 @@ interval : Interval of drawing by miliseconds. Defalut is 100ms.
 
 <pre class="follow">
  x, y     : Position of the decoration's center. 
-            The center, top left and right bottom of the image are (x, y)=(0, 0), (-0.5, -0.5) and (0.5, 0.5) respectively.
+            The positions of center, top left and right bottom of the image are (x, y)=(0, 0), (-0.5, -0.5) and (0.5, 0.5) respectively.
  min, max : Length of the needles. The distance from center to the corners is considered as 1. 
             The lengths of the needles follow the uniform distribution between min to max.
  width    : Thickness of the needles. Specify the angle width degree.
