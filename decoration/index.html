@@ -16,7 +16,7 @@ DECORATION.set_debug_mode(true);
 </head>
 <body>
 
-<h1>How to use decoration.js / decoration.jsの使い方</h1>
+<h1 class="header">How to use decoration.js / decoration.jsの使い方</h1>
 
 <h2>Summary / 概要</h2>
 
@@ -48,6 +48,11 @@ The program is published in <a class="ref" href="https://github.com/TakaakiUmedu
 <img class="DECORATION.star" src="04.jpg" style="width:240px;height:auto;" alt="雨"/>
 <!--<img class="DECORATION.ripple" src="02.jpg" style="width:240px;height:auto;" alt="ripple / 波紋"/>-->
 </p>
+
+<div class="CAUTION">
+<p>描画が重すぎる場合、<a href="index_s.html">サンプルを別々に表示するページ</a>を参照のこと。</p>
+<p>If this page is too heavy, please visit <a href="index_s.html">the separated samples pages</a>.</p>
+</div>
 
 <h3>使い方</h3>
 
@@ -131,9 +136,8 @@ Here, the unit of lengths is ratio to the size of the target image.
 The lengths specified by <code>x</code> and <code>y</code> are considered as the ratio to the width and height of the image, respectively.
 </p>
 
-<h2>Available decorations and their options / デコレーションの種類とオプション</h2>
 
-<h3>Common Options / 共通のオプション</h3>
+<h2>Common Options / 共通のオプション</h2>
 
 <pre>
 interval : 描画間隔、ミリセカンドで指定。デフォルトは100ms。
@@ -148,7 +152,9 @@ color    : Color of drawings. It should be specified in any way that can be used
            For example, <q>argb(RED,BLUE,GREEN,TRANSPARENCY)</q> (RED, BLUE and GREEN should be between 0 to 255 and TRANSPARENCY should be 0 to 1.0), <q>blue</q> or <q>red</q>.
 </pre>
 
-<h3>enforce / 集中線</h3>
+<h2>Available decorations and options / デコレーションの種類とオプション</h2>
+
+<h3 class="sample">enforce / 集中線</h3>
 <blockquote>
 <p class="monospace">
 &lt;img class="<span style="color:red;">DECORATION.enforce(y:-0.3)</span>" src="03.jpg" style="width:240px;height:auto;" alt="We are enforced! / 強いられているんだ"/&gt;<br/>
@@ -182,7 +188,7 @@ color    : Color of drawings. It should be specified in any way that can be used
  color    : Color of the needles. The default is <q>rgba(255,255,255,0.7)</q>.
 </pre>
 
-<h3>snow / 雪</h3>
+<h4 class="sample">snow / 雪</h4>
 <blockquote>
 <p class="monospace">
 &lt;img class="<span style="color:red">DECORATION.snow</span>" src="01.jpg" style="width:240px;height:auto;" alt="snow / 雪"/&gt;<br/>
@@ -214,7 +220,7 @@ color    : Color of drawings. It should be specified in any way that can be used
  color       : Color of the snow.
 </pre>
 
-<h4>rain / 雨</h4>
+<h4 class="sample">rain / 雨</h4>
 <blockquote>
 <p class="monospace">
 &lt;img class="<span style="color:red;">DECORATION.rain(angle:5)</span>" src="05.jpg" style="width:240px;height:auto;" alt="rain / 雨"/&gt;<br/>
@@ -246,7 +252,7 @@ color    : Color of drawings. It should be specified in any way that can be used
  angle     : Angle of rain
 </pre>
 
-<h4>star / 星</h4>
+<h4 class="sample">star / 星</h4>
 <blockquote>
 <p class="monospace">
 &lt;img class="<span style="color:red;">DECORATION.star</span>" src="04.jpg" style="width:240px;height:auto;" alt="star / 星"/&gt;<br/>
@@ -295,7 +301,7 @@ Parameter list omitted. BTW, Too heavy.
 </p>
 -->
 
-<h3>Note / 付記</h3>
+<h3 class="sample">Note / 付記</h3>
 
 <p>
 デコレーションの重ねがけも可能。
@@ -332,7 +338,7 @@ Multiple decoration can be specified.
 </p>
 
 
-<h2>Debug messages / デバッグメッセージ</h2>
+<h2 class="footer">Debug messages / デバッグメッセージ</h2>
 
 <p>読み込み後に以下のようなコードを実行することでデバッグモードをONにでき、その場合、デバッグメッセージがHTMLの末尾に追加される。</p>
 <p>After loading the script, debug mode can be turned on by the following code. When turned on, the debug message will be added to the bottom of the HTML.</p>

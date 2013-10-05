@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Style-Type" content="text/css"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<title>How to use decoration.js / decoration.jsの使い方 : rain / 雨</title>
+<link rel="index" href="index.html"/>
+<link rel="stylesheet" href="layout-default2.css"/>
+<link rel="stylesheet" href="color-default2.css"/>
+<script type="text/javascript" src="decoration.js"></script>
+<script type="text/javascript">
+DECORATION.set_debug_mode(true);
+</script>
+</head>
+<body>
+
+<h1 class="header">How to use decoration.js / decoration.jsの使い方</h1><p><a href="index_s.html#sample_rain">return to main page / 全体の説明へ戻る</a></p><h4 class="sample">rain / 雨</h4>
+<blockquote>
+<p class="monospace">
+&lt;img class="<span style="color:red;">DECORATION.rain(angle:5)</span>" src="05.jpg" style="width:240px;height:auto;" alt="rain / 雨"/&gt;<br/>
+&lt;img class="<span style="color:red;">DECORATION.rain</span>" src="dummy.png" style="width:240px;height:auto;" alt="rain / 雨"/&gt;
+</p>
+</blockquote>
+<p>
+<img class="DECORATION.rain(angle:5)" src="05.jpg" style="width:240px;height:auto;" alt="rain / 雨"/>
+</p>
+
+<pre class="follow">
+ lineWidth : 線の太さ。画像の幅に対する倍率で指定。
+ min, max  : 線の長さ。画像の高さを1としたときに、min～maxの長さの一様ランダムな線が引かれる。
+ count     : 線の量。
+ color     : 線の色。
+ angle     : 雨の角度。
+</pre>
+
+<p>
+<img class="DECORATION.rain" src="dummy.png" style="width:240px;height:auto;" alt="rain / 雨"/>
+</p>
+
+<pre class="follow">
+ lineWidth : Width of lines specified by the ratio to the width of the image.
+ min, max  : Lengths of lines specified by the ratio to the height of the image. 
+             The lengths follow the uniform distribution between min to max.
+ count     : The number of lines
+ color     : Color of rain
+ angle     : Angle of rain
+</pre>
+
+<h2 class="footer">Debug messages / デバッグメッセージ</h2>
+
+<p>読み込み後に以下のようなコードを実行することでデバッグモードをONにでき、その場合、デバッグメッセージがHTMLの末尾に追加される。</p>
+<p>After loading the script, debug mode can be turned on by the following code. When turned on, the debug message will be added to the bottom of the HTML.</p>
+
+<blockquote>
+<pre>
+DECORATION.set_debug_mode(true);
+</pre>
+</blockquote>
+
+<p>このページはデバッグモードをONにしているため、以下にデバッグメッセージが表示される。</p>
+<p>In this page, debug mode is turned on. So debug messages will be added bellow.</p>
+
+<hr/>
+
+</body>
+
+</html>

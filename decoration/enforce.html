@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Style-Type" content="text/css"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<title>How to use decoration.js / decoration.jsの使い方 : enforce / 集中線</title>
+<link rel="index" href="index.html"/>
+<link rel="stylesheet" href="layout-default2.css"/>
+<link rel="stylesheet" href="color-default2.css"/>
+<script type="text/javascript" src="decoration.js"></script>
+<script type="text/javascript">
+DECORATION.set_debug_mode(true);
+</script>
+</head>
+<body>
+
+<h1 class="header">How to use decoration.js / decoration.jsの使い方</h1><p><a href="index_s.html#sample_enforce">return to main page / 全体の説明へ戻る</a></p><h3 class="sample">enforce / 集中線</h3>
+<blockquote>
+<p class="monospace">
+&lt;img class="<span style="color:red;">DECORATION.enforce(y:-0.3)</span>" src="03.jpg" style="width:240px;height:auto;" alt="We are enforced! / 強いられているんだ"/&gt;<br/>
+&lt;img class="<span style="color:red;">DECORATION.enforce</span>" src="dummy.png" style="width:240px;height:auto;" alt="We are enforced! / 強いられているんだ"/&gt;
+</p>
+</blockquote>
+<p>
+<img class="DECORATION.enforce(y:-0.3)" src="03.jpg" style="width:240px;height:auto;" alt="We are enforced! / 強いられているんだ"/>
+</p>
+<pre class="follow">
+ x,    y  : 中心の位置。(x, y)=(0, 0)が中央、左上が(-0.5, -0.5)で、右下が(0.5, 0.5)。
+ min, max : とげの長さ。中心～角の長さを1として指定する。min～maxの間の一様ランダムなとげが描かれる。
+ width    : とげの太さ。角度を度単位で指定。0～width度の一様ランダムなとげが描かれる。
+ skip     : とげととげの間の隙間。角度を度単位で指定。<q>とげの中心</q>～<q>次のとげの中心</q>が0～skip度の一様ランダムな隙間が空く。
+ color    : とげの色。デフォルトは<q>rgba(255,255,255,0.7)</q>。
+</pre>
+
+<p>
+<img class="DECORATION.enforce" src="dummy.png" style="width:240px;height:auto;" alt="We are enforced! / 強いられているんだ"/>
+</p>
+
+<pre class="follow">
+ x, y     : Position of the decoration's center. 
+            The positions of center, top left and right bottom of the image are (x, y)=(0, 0), (-0.5, -0.5) and (0.5, 0.5) respectively.
+ min, max : Length of the needles. The distance from center to the corners is considered as 1. 
+            The lengths of the needles follow the uniform distribution between min to max.
+ width    : Thickness of the needles. Specify the angle width degree.
+            The thickness of the needles follow the uniform distribution between 0 to width degree.
+ skip     : Skips of between needles. Specify the angle width degree.
+            The skips between the center of a needle to that of the next follow the uniform distribution between 0 to skip degree.
+ color    : Color of the needles. The default is <q>rgba(255,255,255,0.7)</q>.
+</pre>
+
+<h2 class="footer">Debug messages / デバッグメッセージ</h2>
+
+<p>読み込み後に以下のようなコードを実行することでデバッグモードをONにでき、その場合、デバッグメッセージがHTMLの末尾に追加される。</p>
+<p>After loading the script, debug mode can be turned on by the following code. When turned on, the debug message will be added to the bottom of the HTML.</p>
+
+<blockquote>
+<pre>
+DECORATION.set_debug_mode(true);
+</pre>
+</blockquote>
+
+<p>このページはデバッグモードをONにしているため、以下にデバッグメッセージが表示される。</p>
+<p>In this page, debug mode is turned on. So debug messages will be added bellow.</p>
+
+<hr/>
+
+</body>
+
+</html>
