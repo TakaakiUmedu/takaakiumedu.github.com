@@ -565,7 +565,7 @@ For more information, see <https://github.com/TakaakiUmedu/decoration.js>.
 				}
 
 				// start draw task after target loaded
-				if(target.readyState == "complete"){
+				if(target.readyState == "complete" || target.complete){
 					debug_output(decoration.name + " started directory : \"" + target.readyState + "\"");
 					decoration.start_draw_task();
 				}else{
